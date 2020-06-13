@@ -7,17 +7,22 @@ public class Main {
         SessionFactory sessionFactory =
                 HibernateFactory.getSessionFactory();
 
-        User u = new User();
-        u.setFirstName("f1");
-        u.setLastName("l1");
-        u.setAge(20);
+        User user = new User();
+        user.setFirstName("Mykola");
+        user.setLastName("Zakharov");
+        user.setAge(23);
 
         EntityManager em = sessionFactory.createEntityManager();
         em.getTransaction().begin();
-        em.persist(u);
+        em.persist(user);
         em.getTransaction().commit();
 
-        DreamJob dreamJob = new DreamJob("programmer", "finance", 25000, "Germany", "Munich");
+        DreamJob dreamJob = new DreamJob();
+        dreamJob.setName("Programmer");
+        dreamJob.setField("Finance");
+        dreamJob.setSalary(25000);
+        dreamJob.setCountry("Germany");
+        dreamJob.setCity("Munich");
         em.getTransaction().begin();
         em.persist(dreamJob);
         em.getTransaction().commit();

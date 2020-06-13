@@ -1,4 +1,5 @@
 public class DreamJob {
+    private long id;
     private String name;
     private String field;
     private Integer salary;
@@ -8,12 +9,16 @@ public class DreamJob {
     public DreamJob() {
     }
 
-    public DreamJob(String name, String field, Integer salary, String country, String city) {
-        this.name = name;
-        this.field = field;
-        this.salary = salary;
-        this.country = country;
-        this.city = city;
+    public DreamJob(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -55,5 +60,4 @@ public class DreamJob {
     public void setCity(String city) {
         this.city = city;
     }
-
 }
