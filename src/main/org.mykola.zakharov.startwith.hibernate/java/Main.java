@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         SessionFactory sessionFactory = HibernateFactory.getSessionFactory();
         EntityManager em = sessionFactory.createEntityManager();
+
         UserDetails userDetails = new UserDetails();
         userDetails.setText("runglskbfyuabtrhbwnahefyaeriltaeyufeitho");
         User user = new User();
@@ -16,9 +17,11 @@ public class Main {
         Workers workers = new Workers();
         workers.getSetOfWorkers().add(user);
         em.getTransaction().begin();
+        em.persist(userDetails);
         em.persist(user);
         em.persist(workers);
         em.getTransaction().commit();
+
         DreamJob dreamJob = new DreamJob();
         dreamJob.setName("Programmer");
         dreamJob.setField("Finance");

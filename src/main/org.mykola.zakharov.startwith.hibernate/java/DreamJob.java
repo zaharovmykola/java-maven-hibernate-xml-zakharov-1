@@ -1,4 +1,3 @@
-import java.util.Set;
 
 public class DreamJob {
     private long id;
