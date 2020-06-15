@@ -1,3 +1,5 @@
+import java.util.Set;
+
 public class DreamJob {
     private long id;
     private String name;
@@ -60,4 +62,5 @@ public class DreamJob {
     public void setCity(String city) {
         this.city = city;
     }
+
 }

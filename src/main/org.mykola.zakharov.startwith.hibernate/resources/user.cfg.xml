@@ -8,5 +8,9 @@
         <property name="firstName" column="first_name" type="string" />
         <property name="lastName" column="last_name" type="string" />
         <property name="age" column="age" type="int" />
+        <many-to-one name="workers" class="Workers">
+            <column name="workers_id" not-null="true" />
+        </many-to-one>
+        <one-to-one name="userDetails" class="UserDetails"/>
     </class>
 </hibernate-mapping>
