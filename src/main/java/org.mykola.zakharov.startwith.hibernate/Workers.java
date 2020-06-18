@@ -28,4 +28,12 @@ public class Workers {
     public void setSetOfWorkers(Set<User> setOfWorkers) {
         this.setOfWorkers = setOfWorkers;
     }
+
+    @Override
+    public String toString() {
+        return "Workers{" +
+                "id=" + id +
+                ", setOfWorkers=" + setOfWorkers +
+                '}';
+    }
 }

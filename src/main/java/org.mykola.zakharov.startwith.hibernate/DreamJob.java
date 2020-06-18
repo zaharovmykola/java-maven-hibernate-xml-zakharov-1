@@ -62,4 +62,15 @@ public class DreamJob {
         this.city = city;
     }
 
+    @Override
+    public String toString() {
+        return "DreamJob{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", field='" + field + '\'' +
+                ", salary=" + salary +
+                ", country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                '}';
+    }
 }

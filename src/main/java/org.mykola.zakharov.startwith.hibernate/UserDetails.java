@@ -30,4 +30,11 @@ public class UserDetails {
     public void setUser(User user) {
         this.user = user;
     }
+
+    @Override
+    public String toString() {
+        return "UserDetails{" +
+                "text='" + text + '\'' +
+                '}';
+    }
 }

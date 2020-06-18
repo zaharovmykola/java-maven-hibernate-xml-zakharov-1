@@ -61,4 +61,15 @@ public class User {
     public void setWorkers(Workers workers) {
         this.workers = workers;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", age=" + age +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", userDetails=" + userDetails +
+                '}';
+    }
 }
