@@ -1,4 +1,4 @@
-
+package org.mykola.zakharov.startwith.hibernate;
 public class DreamJob {
     private long id;
     private String name;

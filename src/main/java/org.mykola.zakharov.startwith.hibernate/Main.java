@@ -1,3 +1,4 @@
+package org.mykola.zakharov.startwith.hibernate;
 import org.hibernate.SessionFactory;
 
 import javax.persistence.EntityManager;
@@ -16,10 +17,11 @@ public class Main {
         user.setUserDetails(userDetails);
         Workers workers = new Workers();
         workers.getSetOfWorkers().add(user);
+        user.setWorkers(workers);
         em.getTransaction().begin();
         em.persist(userDetails);
-        em.persist(user);
         em.persist(workers);
+        em.persist(user);
         em.getTransaction().commit();
 
         DreamJob dreamJob = new DreamJob();

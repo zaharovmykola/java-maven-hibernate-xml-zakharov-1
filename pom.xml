@@ -44,7 +44,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>Main</mainClass>
+                            <mainClass>package org.mykola.zakharov.startwith.hibernate.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -1,3 +1,4 @@
+package org.mykola.zakharov.startwith.hibernate;
 public class User {
 
     private long id;
@@ -5,6 +6,7 @@ public class User {
     private String firstName;
     private String lastName;
     private UserDetails userDetails;
+    private Workers workers;
 
     public User() {}
 
@@ -52,4 +54,11 @@ public class User {
         this.userDetails = userDetails;
     }
 
+    public Workers getWorkers() {
+        return workers;
+    }
+
+    public void setWorkers(Workers workers) {
+        this.workers = workers;
+    }
 }
