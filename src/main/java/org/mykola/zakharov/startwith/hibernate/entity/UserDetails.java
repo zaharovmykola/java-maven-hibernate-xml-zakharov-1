@@ -1,7 +1,18 @@
-package org.mykola.zakharov.startwith.hibernate;
+package org.mykola.zakharov.startwith.hibernate.entity;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="UsersDetails")
 public class UserDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private long id;
+    @Column(name="details", length=100)
     private String text;
+    @OneToOne(mappedBy = "userDetails")
     private User user;
 
     public UserDetails() {

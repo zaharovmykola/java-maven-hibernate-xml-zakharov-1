@@ -1,17 +1,26 @@
-package org.mykola.zakharov.startwith.hibernate;
+package org.mykola.zakharov.startwith.hibernate.entity;
+import javax.persistence.*;
+
+@Entity
+@Table(name="Workers")
 public class DreamJob {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private long id;
+    @Column(name="name", length=25)
     private String name;
+    @Column(name="field", length=25)
     private String field;
+    @Column(name="salary")
     private Integer salary;
+    @Column(name="country", length=25)
     private String country;
+    @Column(name="city", length=25)
     private String city;
 
     public DreamJob() {
-    }
-
-    public DreamJob(long id) {
-        this.id = id;
     }
 
     public long getId() {
@@ -65,7 +74,6 @@ public class DreamJob {
     @Override
     public String toString() {
         return "DreamJob{" +
-                "id=" + id +
                 ", name='" + name + '\'' +
                 ", field='" + field + '\'' +
                 ", salary=" + salary +

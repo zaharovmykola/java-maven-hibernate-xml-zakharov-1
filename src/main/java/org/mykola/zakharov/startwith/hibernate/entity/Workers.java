@@ -1,16 +1,20 @@
-package org.mykola.zakharov.startwith.hibernate;
+package org.mykola.zakharov.startwith.hibernate.entity;
 import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.*;
 
+@Entity
+@Table(name="Workers")
 public class Workers {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private long id;
+    @OneToMany(mappedBy = "workers")
     private Set<User> setOfWorkers = new HashSet<>(0);
 
     public Workers() {
-    }
-
-    public Workers(long id) {
-        this.id = id;
     }
 
     public long getId() {
@@ -32,7 +36,6 @@ public class Workers {
     @Override
     public String toString() {
         return "Workers{" +
-                "id=" + id +
                 ", setOfWorkers=" + setOfWorkers +
                 '}';
     }
