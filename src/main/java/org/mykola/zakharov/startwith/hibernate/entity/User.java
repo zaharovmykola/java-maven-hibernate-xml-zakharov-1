@@ -6,11 +6,11 @@ import java.util.Set;
 
 @Entity
 @Table(name="Users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
-    private long id;
+public class User extends AbstractEntity {
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name="id")
+//    private long id;
     @Column(name="age")
     private int age;
     @Column(name="first_name", length=25)
@@ -29,13 +29,13 @@ public class User {
 
     public User() {}
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
+//    public long getId() {
+//        return id;
+//    }
+//
+//    public void setId(long id) {
+//        this.id = id;
+//    }
 
     public int getAge() {
         return age;

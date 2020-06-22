@@ -4,12 +4,12 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="UsersDetails")
-public class UserDetails {
+public class UserDetails extends AbstractEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
-    private long id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name="id")
+//    private long id;
     @Column(name="details", length=100)
     private String text;
     @OneToOne(mappedBy = "userDetails")
@@ -18,13 +18,13 @@ public class UserDetails {
     public UserDetails() {
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
+//    public long getId() {
+//        return id;
+//    }
+//
+//    public void setId(long id) {
+//        this.id = id;
+//    }
 
     public String getText() {
         return text;
