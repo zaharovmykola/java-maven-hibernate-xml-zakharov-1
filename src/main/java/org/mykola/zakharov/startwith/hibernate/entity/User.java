@@ -7,10 +7,6 @@ import java.util.Set;
 @Entity
 @Table(name="Users")
 public class User extends AbstractEntity {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name="id")
-//    private long id;
     @Column(name="age")
     private int age;
     @Column(name="first_name", length=25)
@@ -28,14 +24,6 @@ public class User extends AbstractEntity {
     private Set<Role> setOfRoles = new HashSet<>(0);
 
     public User() {}
-
-//    public long getId() {
-//        return id;
-//    }
-//
-//    public void setId(long id) {
-//        this.id = id;
-//    }
 
     public int getAge() {
         return age;

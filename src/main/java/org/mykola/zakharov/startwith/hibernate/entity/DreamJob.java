@@ -4,11 +4,6 @@ import javax.persistence.*;
 @Entity
 @Table(name="Workers")
 public class DreamJob extends AbstractEntity {
-
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name="id")
-//    private long id;
     @Column(name="name", length=25)
     private String name;
     @Column(name="field", length=25)
@@ -22,14 +17,6 @@ public class DreamJob extends AbstractEntity {
 
     public DreamJob() {
     }
-
-//    public long getId() {
-//        return id;
-//    }
-//
-//    public void setId(long id) {
-//        this.id = id;
-//    }
 
     public String getName() {
         return name;
